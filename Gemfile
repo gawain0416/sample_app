@@ -1,12 +1,22 @@
-source 'https://rubygems.org'
-gem 'rails', '4.1.0'
 
+
+#source 'https://rubygems.org'
+source 'https://ruby.taobao.org/'
+gem 'rails', '4.1.0'
+gem 'rake','>= 10.3.2'
+gem 'bootstrap-sass'
+gem 'minitest'
+gem 'bcrypt-ruby'
 group :production do
   gem 'pg', '0.15.1'
 end
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess'
 end
 
 group :test do
@@ -14,11 +24,9 @@ group :test do
   gem 'capybara', '2.1.0'
 end
 
-ruby '2.0.0'
 
 
 
-gem 'rspec-rails', '2.13.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
